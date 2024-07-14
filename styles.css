@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #444444;
+}
+
+.container {
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    max-width: 300px;
+    width: 100%;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="number"], input[type="checkbox"], input[type="radio"], button {
+    margin: 5px 0;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.option-group {
+    margin: 20px 0;
+    text-align: left;
+}
+
+.option-label {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+    text-align: center;
+}
+
+#result {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #333;
+}

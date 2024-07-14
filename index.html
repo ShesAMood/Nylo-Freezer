@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nylo Freezer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Nylo Freezer</h1>
+        <label for="magicLevel">Magic Level</label>
+        <input type="number" id="magicLevel" min="82" max="99" value="99">
+        
+        <label for="useVoid">
+            <input type="checkbox" id="useVoid"> Using Void Mage?
+        </label>
+        
+        <div class="option-group">
+            <label class="option-label">Boost Type</label>
+            <label>
+                <input type="radio" name="boostType" value="1"> Saturated Heart
+            </label>
+            <label>
+                <input type="radio" name="boostType" value="2"> Divine Mage Pot
+            </label>
+            <label>
+                <input type="radio" name="boostType" value="3" checked> No Boost
+            </label>
+        </div>
+        
+        <div class="option-group">
+            <label class="option-label">Prayer Type</label>
+            <label>
+                <input type="radio" name="prayerType" value="1"> Augury
+            </label>
+            <label>
+                <input type="radio" name="prayerType" value="2"> Mystic Might
+            </label>
+            <label>
+                <input type="radio" name="prayerType" value="3" checked> No Prayer
+            </label>
+        </div>
+        
+        <button onclick="calculate()">Calculate</button>
+        <button onclick="exitProgram()">Exit</button>
+        
+        <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
