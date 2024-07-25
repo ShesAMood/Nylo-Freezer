@@ -1,7 +1,7 @@
 function calculate() {
     const magicLevel = parseInt(document.getElementById('magicLevel').value);
     const useVoid = document.getElementById('useVoid').checked;
-    const extraMultiplier = document.getElementById('extraMultiplier').checked;
+    const iceSceptre = document.getElementById('iceSceptre').checked;
     
     let boostType = document.querySelector('input[name="boostType"]:checked').value;
     let prayerType = document.querySelector('input[name="prayerType"]:checked').value;
