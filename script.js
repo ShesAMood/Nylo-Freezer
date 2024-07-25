@@ -8,6 +8,7 @@ function calculate() {
 
     let toBeat = (magicLevel + 9) * 204;
     let visual;
+    let result;
 	
     if (boostType == 3) {
         visual = magicLevel; // No boost
@@ -37,9 +38,9 @@ function calculate() {
 	effective += 9;
 	
     if (iceSceptre) {
-		const result = Math.ceil(((toBeat / 1.1) / effective) - 64);
+		result = Math.ceil(((toBeat / 1.1) / effective) - 64);
     } else {
-		const result = Math.ceil((toBeat / effective) - 64);
+		result = Math.ceil((toBeat / effective) - 64);
 	}
 
     document.getElementById('result').innerText = `You need a magic attack bonus of: ${result}`;
