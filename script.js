@@ -1,6 +1,7 @@
 function calculate() {
     const magicLevel = parseInt(document.getElementById('magicLevel').value);
     const useVoid = document.getElementById('useVoid').checked;
+    const extraMultiplier = document.getElementById('extraMultiplier').checked;
     
     let boostType = document.querySelector('input[name="boostType"]:checked').value;
     let prayerType = document.querySelector('input[name="prayerType"]:checked').value;
@@ -30,6 +31,11 @@ function calculate() {
 
     if (useVoid) {
         effective *= 1.45;
+        effective = Math.floor(effective);
+    }
+
+    if (iceSceptre) {
+        effective *= 1.1;
         effective = Math.floor(effective);
     }
 
