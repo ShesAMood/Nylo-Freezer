@@ -39,7 +39,3 @@ function calculate() {
 
     document.getElementById('result').innerText = `You need a magic attack bonus of: ${result}`;
 }
-
-function exitProgram() {
-    window.close();
-}
