@@ -8,7 +8,6 @@ function calculate() {
 
     let toBeat = (magicLevel + 9) * 204;
     let visual;
-    let result;
 	
     if (boostType == 3) {
         visual = magicLevel; // No boost
