@@ -2,13 +2,13 @@ function calculate() {
     const magicLevel = parseInt(document.getElementById('magicLevel').value);
     const useVoid = document.getElementById('useVoid').checked;
     const iceSceptre = document.getElementById('iceSceptre').checked;
-	
+    
     let boostType = document.querySelector('input[name="boostType"]:checked').value;
     let prayerType = document.querySelector('input[name="prayerType"]:checked').value;
 
     let toBeat = (magicLevel + 9) * 204;
     let visual;
-
+	
     if (boostType == 3) {
         visual = magicLevel; // No boost
     } else if (boostType == 1) {
@@ -31,17 +31,16 @@ function calculate() {
 
     if (useVoid) {
         effective *= 1.45;
+        effective = Math.floor(effective);
     }
 	
-	if (iceSceptre) {
-        effective *= 1.1;
-    }
+	effective += 9;
 	
-	effective = Math.floor(effective);
-
-    effective += 9;
-
-    const result = Math.ceil((toBeat / effective) - 64);
+    if (iceSceptre) {
+		const result = Math.ceil(((toBeat / 1.1) / effective) - 64);
+    } else {
+		const result = Math.ceil((toBeat / effective) - 64);
+	}
 
     document.getElementById('result').innerText = `You need a magic attack bonus of: ${result}`;
 }
