@@ -15,9 +15,9 @@
         <label for="useVoid">
             <input type="checkbox" id="useVoid"> Using Void Mage?
         </label>
-		
-		<label for="iceSceptre">
-            <input type="checkbox" id="iceSceptre"> Using Ice Sceptre? (beta)
+        
+        <label for="iceSceptre">
+            <input type="checkbox" id="iceSceptre"> Using Ice Sceptre?
         </label>
         
         <div class="option-group">
@@ -25,14 +25,20 @@
             <label>
                 <input type="radio" name="boostType" value="1"> Saturated Heart
             </label>
+			<label>
+                <input type="radio" name="boostType" value="4" checked> Forgotten Brew
+            </label>
             <label>
-                <input type="radio" name="boostType" value="2"> Divine Mage Pot
+                <input type="radio" name="boostType" value="2"> Mage Pot
             </label>
             <label>
                 <input type="radio" name="boostType" value="3" checked> No Boost
             </label>
         </div>
         
+		<label for="boostDecay">Boost Decay</label>
+        <input type="number" id="boostDecay" min="-8" max="0" value="0">
+		
         <div class="option-group">
             <label class="option-label">Prayer Type</label>
             <label>
