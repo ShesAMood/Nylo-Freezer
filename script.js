@@ -1,5 +1,6 @@
 function calculate() {
     const magicLevel = parseInt(document.getElementById('magicLevel').value);
+	const boostDecay = parseInt(document.getElementById('boostDecay').value);
     const useVoid = document.getElementById('useVoid').checked;
     const iceSceptre = document.getElementById('iceSceptre').checked;
     
@@ -15,8 +16,12 @@ function calculate() {
         visual = (magicLevel * 1.1) + 4; // Saturated Heart
     } else if (boostType == 2) {
         visual = magicLevel + 4; // Divine Mage Pot
-    }
-
+		visual += boostDecay;
+    } else if (boostType == 4) {
+		visual = magicLevel + 3 + Math.floor(magicLevel * 0.08) // Forgotten Brew
+		visual += boostDecay;
+	}
+	
     let effective = Math.floor(visual);
 
     if (prayerType == 3) {
